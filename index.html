@@ -7,8 +7,47 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="flowers.png" type="image/x-icon">
     <title>flowers</title>
+    <style>
+      @keyframes glow {
+        0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+        50% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; }
+        100% { text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+      }
+  
+      @keyframes shake {
+        0% { transform: translate(0, 0); }
+        25% { transform: translate(-2px, 2px); }
+        50% { transform: translate(2px, -2px); }
+        75% { transform: translate(-2px, 2px); }
+        100% { transform: translate(0, 0); }
+      }
+  
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+      }
+  
+      .animated-text {
+        color: white;
+        position: fixed;
+        top: 100px;
+        z-index: 10000;
+        font-size: 24px;
+        font-weight: bold;
+        animation: glow 1.5s infinite alternate, shake 2s infinite, pulse 2s infinite ease-in-out;
+        background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff62, #00c3ff, #9b00ff, #ff00c3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
 </head>
 <body class="container">
+  <audio autoplay>
+    <source src="./bbm.mp3" type="audio/mpeg">
+</audio>
+  <div class="animated-text" style="color:white;position:fixed;top:60px;z-index: 10000;">Cho em nè Sì líp pi</div>
+
     <div class="night"></div>
     <div class="flowers">
       <div class="flower flower--1">
